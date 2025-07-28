@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Button id="toggle">Click me</Button>
+    <script>
+        let flag=false;
+        let a= document.getElementById("toggle");
+        
+       const hanle=()=>{
+            document.body.style.backgroundColor='black';
+        } 
+       
+          a.addEventListener('click',()=>{
+            if(flag===false){
+            hanle();
+            flag=true;
+            } else{
+            document.body.style.backgroundColor='';
+           flag=false;
+        }
+    })
+          
+        
+      
+       
+    </script>
+</body>
+</html>

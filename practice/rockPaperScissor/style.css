@@ -1,0 +1,90 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* overall page */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* title */
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* choice buttons row */
+.container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* each choice “button” */
+.game {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.game:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* scale the images to fit nicely */
+.game img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* scoreboard container */
+.scoreboard {
+  display: flex;
+  gap: 2rem;
+}
+
+/* each player panel */
+.player1,
+.player2 {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 120px;
+  text-align: center;
+}
+
+/* player name */
+.player1 h4,
+.player2 h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* score number */
+.player1 p,
+.player2 p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}

@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    position: relative; /* For the shadow effect */
+}
+
+.calculator::before {
+    content: '';
+    position: absolute;
+    top: 8px; /* Adjust for shadow size */
+    left: 8px; /* Adjust for shadow size */
+    right: 8px; /* Adjust for shadow size */
+    bottom: 8px; /* Adjust for shadow size */
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.display {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Add transition effect */
+    color: white;
+    outline:none; /*remove the blue outline on click*/
+}
+
+button.red {
+    background-color: #e74c3c;
+}
+
+button.red:hover {
+  background-color: #c0392b;
+}
+
+
+button.gray {
+    background-color: #444;
+}
+
+button.gray:hover {
+    background-color: #555;
+}
+
+
+button.zero {
+    grid-column: 1 / span 2; /* Span two columns */
+    border-radius: 40px;
+     text-align: left;
+  padding-left: 30px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecasts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+         <div class="left-panel">
+            <div class="content">
+            <img class="main-icon" id = "weather-icon-main" src="" alt="Weather Icon">
+            <h1>Weather Forecasts</h1>
+            <button class="get-start-button" id="get-start-button">Get Start</button>
+             <!-- <p class="create-account">Create an account</p> -->
+            </div>
+         </div>
+          <div class="right-panel weather-cards-panel" >
+           <div class="weather-details-container">
+             <div class="weather-header">
+                <div class="location-container">
+                    <img src="images/location.svg" alt="Location Icon" class="icon">
+                  <span id="location-text">Location</span>
+                   <button class="add-button" id="add-button"> + </button>
+                </div>
+            <p class="date-time" id="date-time">Monday 1 January 9:00</p>
+        </div>
+          <div class="weather-details-section">
+             <h1 id="temperature">22°</h1>
+            <p class="weather-desc" id="weather-desc">Cloudy</p>
+            <div class="stats-section">
+              <div class="precipitation-container">
+                  <img src="images/precipitation.svg" alt="Precipitation" class="icon">
+                  <span id="precipitation-value">30%</span>
+                </div>
+               <div class="humidity-container">
+                <img src="images/humidity.svg" alt="Humidity Icon" class="icon">
+                   <span id="humidity-value">20%</span>
+                </div>
+                <div class="wind-container">
+                   <img src="images/wind.svg" alt="Wind Icon" class="icon">
+                   <span id="wind-value">12 km/h</span>
+                 </div>
+            </div>
+            </div>
+             <div class="graph-section">
+                 <canvas id="graph-canvas"></canvas>
+             </div>
+            <div class="week-forecasts">
+                <h2>7-Day Forecasts</h2>
+                <div class="daily-forecasts" id="daily-forecasts-container">
+                </div>
+            </div>
+            </div>
+          <div id="weather-cards-container" class="weather-cards-container" style ="display:none"></div>
+         </div>
+        <div class="modal" id="locationModal">
+            <div class="modal-content">
+              <span class="close-button" id="close-button">×</span>
+              <h2>Enter Location</h2>
+              <input type="text" id="location-input" placeholder="City or Zip Code">
+              <button id="submit-location">Submit</button>
+            </div>
+        </div>
+     <div class="modal" id="cityInputModal">
+        <div class="modal-content" id="cityInputCard">
+            <span class="close-button" id="cityInputCloseButton">×</span>
+           <h2>Enter Cities</h2>
+           <input type="text" id="city-input" placeholder="Enter cities separated by commas">
+           <button id="submit-city">Submit</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
